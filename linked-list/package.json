@@ -1,0 +1,14 @@
+{
+  "name": "linked-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "linked-list.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Julian Feliciano",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^2.4.5"
+  }
+}
