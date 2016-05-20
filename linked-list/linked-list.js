@@ -1,11 +1,8 @@
 'use strict';
 
-const Node = require('./node');
-
 class LinkedList {
   constructor(head) {
     this.head = head;
-    this.tail = null;
   }
 
   append(node) {
@@ -13,7 +10,11 @@ class LinkedList {
     var foundNode = findNextNode(this.head);
 
     foundNode.next = node;
-    this.tail = node;
+  }
+
+  prepend(node) {
+    node.next = this.head;
+    this.head = node;
   }
 }
 
@@ -22,10 +23,9 @@ function findNextNode(node) {
   return findNextNode(node.next);
 }
 
-
 module.exports = LinkedList;
+
 // Be able to add stuf to the list
-  // Prepend
   // Put in the middle
 // Be able to check if a thing is on the list
 // Get the length of the list
